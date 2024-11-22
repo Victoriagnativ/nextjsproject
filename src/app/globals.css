@@ -1,21 +1,271 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+*{
+  margin: 0 auto;
+    box-sizing: border-box;
+}
+body{
+ background: cornflowerblue;
+  color: black;
+}
+header{
+    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background-color: floralwhite;
+  border-bottom: 2px solid cadetblue;
+  padding: 20px 50px;
+    position: fixed; /* Фіксована позиція */
+    top: 0; /* Прикріплює хедер до верхнього краю */
+    left: 0;
+    z-index: 1000; /* Забезпечує, що хедер буде поверх інших елементів */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2)
+}
+ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 5px;
+    width: 100%;
+    max-width: 100%;
+    margin: 20px auto;
+    list-style: none;
+}
+li a{
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+    color: black;
+}
+.header nav ul li a:hover {
+    color: #1abc9c;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.movie-card {
+    width: 250px;
+    height: 500px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+    margin: 20px;
+    cursor: pointer;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.movie-card:hover {
+    transform: scale(1.05);
 }
+
+/* Стилізація зображення */
+.movie-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* Інформація про фільм */
+.movie-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.movie-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+    margin: 10px 0;
+}
+
+.movie-rating {
+    font-size: 16px;
+    color: #ffa41b;
+    font-weight: bold;
+}
+
+/* Стилізація зображення */
+.movie-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* Інформація про фільм */
+.movie-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.movie-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+    margin: 10px 0;
+}
+
+.movie-rating {
+    font-size: 16px;
+    color: #ffa41b;
+    font-weight: bold;
+}
+.container {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    min-height: 100vh;
+    margin-top: 69px;
+
+}
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+}
+
+.pageButton {
+    padding: 10px 20px;
+    background-color: #555252;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.input-container {
+
+    display: flex;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.input-container label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+
+}
+
+input[type="text"], input[type="password"], input[type="email"], input[type="search"] {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="text"]:hover, input[type="password"]:hover, input[type="email"]:hover, input[type="search"]:hover {
+    border-color: #3498db;
+}
+
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="search"]:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.6); /* Підсвічування при фокусі */
+}
+
+input[type="text"]::placeholder, input[type="password"]::placeholder, input[type="email"]::placeholder, input[type="search"]::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+.btn-search{
+    margin-left: 10px;
+    width: 100px;
+    border-radius: 20px;
+    border: none;
+
+}
+.btn-search:hover{
+    transform: scale(1.05);
+}
+.container-add{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 69px;
+    padding: 60px;
+    background-color: #f9f9f9;
+}
+/* Контейнер для сторінки жанрів */
+.genres-container {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Заголовок */
+.genres-container h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+/* Контейнер для списку жанрів */
+.genres-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 колонки рівної ширини */
+    gap: 20px; /* Відстань між елементами */
+    padding: 0;
+    list-style-type: none;
+}
+
+
+/* Стиль для кожного елементу жанру */
+.genre-item {
+    padding: 15px;
+    background-color: #3498db;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ховер-ефект для жанрів */
+.genre-item:hover {
+    transform: scale(1.05);
+    background-color: #2980b9;
+}
+
+/* Стилі для активного жанру */
+.genre-item.active {
+    background-color: #e74c3c;
+}
+
+/* Адаптивність для мобільних пристроїв */
+@media (max-width: 768px) {
+    .genres-container {
+        padding: 20px;
+    }
+
+    .genres-list {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .genre-item {
+        font-size: 16px;
+    }
+}
+
