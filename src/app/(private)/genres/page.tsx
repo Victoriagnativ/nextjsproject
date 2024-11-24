@@ -18,14 +18,13 @@ const Page = () => {
     if (error) {
         return <div>Помилка: {error}</div>;
     }
-
+     console.log('page', genres)
     return (
         <div className ='container-add'>
          <div className ="genres-list">
             {genres.map((genre: IGenre) => (
                 <div className ="genre-item" key={genre.id}>
                     <Link href={'/genres/' + genre.id}>{genre.name}</Link>
-                    {/*<GenreBadge key={genre.id} genres={genres}/>*/}
                 </div>
 
 

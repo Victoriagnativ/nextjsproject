@@ -7,20 +7,10 @@ const LoginButton = () => {
     };
 
     return (
-        <div>
+        <div className='box'>
             {!isLoggedIn ? (
-                <button
+                <button className='info-user'
                     onClick={handleLogin}
-                    style={{
-                        padding: '3px 10px',
-                        fontSize: '16px',
-                        background:'black',
-                        color: 'white',
-                        border: 'none',
-                        borderRadius: '5px',
-                        cursor: 'pointer',
-
-                    }}
                 >
                     Login
                 </button>

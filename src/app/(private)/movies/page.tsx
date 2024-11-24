@@ -29,8 +29,6 @@
 //         <div>
 //             <Header/>
 //             <MoviesList movies={movies}/>
-//             <button onClick={() => setPage(prev => prev - 1)} disabled={page === 1}>Попередня</button>
-//             <button onClick={() => setPage(prev => prev + 1)}>Наступна</button>
 //
 //         </div>
 //     );

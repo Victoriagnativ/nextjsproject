@@ -1,3 +1,5 @@
+import {IGenre} from "@/app/models/IGenre";
+
 export type IMovie ={
     adult: boolean;
 	backdrop_path: string;
@@ -13,4 +15,6 @@ export type IMovie ={
 	video: boolean;
 	vote_average: number;
 	vote_count: number;
+	genres:IGenre[]
 }
+

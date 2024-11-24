@@ -34,12 +34,6 @@ const MoviesPage = () => {
         </div>
             <div className= "pagination"><Pagination/></div>
 
-            {/*<button onClick={() => setPage(prev => prev - 1)} disabled={page === 1}>Попередня</button>*/}
-            {/*<button onClick={() => setPage(prev => prev + 1)}>Наступна</button>*/}
-            {/*<footer className='pagination'>*/}
-
-            {/*</footer>*/}
-
         </div>
     );
 };

@@ -18,17 +18,13 @@ const MovieDetails = () => {
             getMovie(id)
                 .then(data => setMovie(data))
                 .catch(error => console.error("Error fetching movie:", error));
-        }
-    }, [id]);
 
-    if (!id) return <p>Loading...</p>;
+        }
+
+    }, [id]);
 
     return (
         <div>
-            {/*<h1>{movie?.title}</h1>*/}
-            {/*<p>{movie?.overview}</p>*/}
-            {/*<p>Рейтинг: {movie?.vote_average}</p>*/}
-            {/* <StarsRating rating={movie?.vote_average || 0} />*/}
             {movie && <MovieInfo movie={movie}/>}
 
         </div>

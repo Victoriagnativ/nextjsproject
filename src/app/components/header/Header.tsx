@@ -20,7 +20,7 @@ const Header = () => {
                 <ul>
                     <li><Link href="/">Home</Link></li>
                     <li><Link href="/genres">Genres</Link></li>
-                    <li><UserInfo /></li>
+
                 </ul>
 
             </nav>
@@ -32,6 +32,7 @@ const Header = () => {
                     onChange={(e) => setQuery(e.target.value)}
                 />
                 <button  className='btn-search' onClick={handleSearch}>Search</button>
+              <div ><UserInfo /></div>
             </div>
         </header>
     );

@@ -8,14 +8,15 @@ type Props={
     movie:IMovie
 }
 const MoviesListCard:FC<Props>= ({movie}) => {
+    console.log('card',movie.genre_ids);
     return (
         <div>
            <div className="movie-card">
             <Link href={'/movies/' + movie.id}> <PosterPreview image={movie.poster_path} /></Link>
                <div className="movie-info">
                    <h3 className="movie-title"><Link href={'/movies/' + movie.id}>{movie.title}</Link></h3>
-                   <p className="movie-rating"><StarsRating rating={movie.vote_average}/></p>
-                       <GenreBadge genres={movie.genre_ids}/>
+                   <StarsRating rating={movie.vote_average}/>
+                       <GenreBadge genresId={movie.genre_ids}/>
                </div>
            </div>
         </div>

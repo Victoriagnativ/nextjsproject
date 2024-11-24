@@ -3,20 +3,20 @@
     box-sizing: border-box;
 }
 body{
- background: cornflowerblue;
+  background: cornflowerblue;
   color: black;
 }
 header{
     width: 100%;
-  display: flex;
-  justify-content: space-between;
-  background-color: floralwhite;
-  border-bottom: 2px solid cadetblue;
-  padding: 20px 50px;
-    position: fixed; /* Фіксована позиція */
-    top: 0; /* Прикріплює хедер до верхнього краю */
+    display: flex;
+    justify-content: space-evenly;
+    background-color: floralwhite;
+    border-bottom: 2px solid cadetblue;
+    padding: 20px 50px;
+    position: fixed;
+    top: 0;
     left: 0;
-    z-index: 1000; /* Забезпечує, що хедер буде поверх інших елементів */
+    z-index: 1000;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2)
 }
 ul{
@@ -29,16 +29,35 @@ ul{
     list-style: none;
 }
 li a{
-
+    margin-left: 10px;
     color: black;
+    font-size: 30px;
+    text-decoration: none;
+    font-style: unset;
 }
-.header nav ul li a:hover {
+ li a:hover {
     color: #1abc9c;
 }
+li a:focus{
+    color: #971634;
+}
+.info-user{
+    padding: 20px 10px;
+    font-size: 16px;
+    background:black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 30px;
 
+}
+.box p{
+    width: 150px;
+    margin: 30px 10px;
+}
 .movie-card {
     width: 250px;
-    height: 500px;
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -52,40 +71,12 @@ li a{
     transform: scale(1.05);
 }
 
-/* Стилізація зображення */
 .movie-image {
     width: 100%;
     height: 350px;
     object-fit: cover;
 }
 
-/* Інформація про фільм */
-.movie-info {
-    padding: 15px;
-    text-align: center;
-}
-
-.movie-title {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333333;
-    margin: 10px 0;
-}
-
-.movie-rating {
-    font-size: 16px;
-    color: #ffa41b;
-    font-weight: bold;
-}
-
-/* Стилізація зображення */
-.movie-image {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-}
-
-/* Інформація про фільм */
 .movie-info {
     padding: 15px;
     text-align: center;
@@ -113,7 +104,7 @@ li a{
     background-color: #f9f9f9;
     color: #333;
     min-height: 100vh;
-    margin-top: 69px;
+    margin-top: 80px;
 
 }
 
@@ -128,17 +119,26 @@ li a{
 
 .pageButton {
     padding: 10px 20px;
-    background-color: #555252;
+    background-color: #080865;
     color: white;
     border: none;
     border-radius: 5px;
+}
+.pageButton:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+    transition: all;
+}
+ span {
+   color: black;
+    font-size: 20px;
 }
 
 .input-container {
 
     display: flex;
     width: 100%;
-    max-width: 300px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
@@ -169,7 +169,7 @@ input[type="text"]:hover, input[type="password"]:hover, input[type="email"]:hove
 
 input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="search"]:focus {
     border-color: #3498db;
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.6); /* Підсвічування при фокусі */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.6);
 }
 
 input[type="text"]::placeholder, input[type="password"]::placeholder, input[type="email"]::placeholder, input[type="search"]::placeholder {
@@ -178,7 +178,7 @@ input[type="text"]::placeholder, input[type="password"]::placeholder, input[type
 }
 .btn-search{
     margin-left: 10px;
-    width: 100px;
+    width: 150px;
     border-radius: 20px;
     border: none;
 
@@ -195,7 +195,6 @@ input[type="text"]::placeholder, input[type="password"]::placeholder, input[type
     padding: 60px;
     background-color: #f9f9f9;
 }
-/* Контейнер для сторінки жанрів */
 .genres-container {
     padding: 40px;
     max-width: 1200px;
@@ -208,8 +207,6 @@ input[type="text"]::placeholder, input[type="password"]::placeholder, input[type
     justify-content: center;
     align-items: center;
 }
-
-/* Заголовок */
 .genres-container h1 {
     font-size: 36px;
     color: #333;
@@ -218,18 +215,13 @@ input[type="text"]::placeholder, input[type="password"]::placeholder, input[type
     letter-spacing: 2px;
     font-weight: bold;
 }
-
-/* Контейнер для списку жанрів */
 .genres-list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 колонки рівної ширини */
-    gap: 20px; /* Відстань між елементами */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
     padding: 0;
     list-style-type: none;
 }
-
-
-/* Стиль для кожного елементу жанру */
 .genre-item {
     padding: 15px;
     background-color: #3498db;
@@ -243,18 +235,15 @@ input[type="text"]::placeholder, input[type="password"]::placeholder, input[type
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Ховер-ефект для жанрів */
 .genre-item:hover {
     transform: scale(1.05);
     background-color: #2980b9;
 }
 
-/* Стилі для активного жанру */
 .genre-item.active {
     background-color: #e74c3c;
 }
 
-/* Адаптивність для мобільних пристроїв */
 @media (max-width: 768px) {
     .genres-container {
         padding: 20px;
@@ -269,3 +258,85 @@ input[type="text"]::placeholder, input[type="password"]::placeholder, input[type
     }
 }
 
+.genres-badge-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+}
+
+.genre-badge {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.genre-badge:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+.genre-badge:focus {
+    outline: 2px solid #76c7c0;
+    outline-offset: 4px;
+}
+.movie-card2 {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 150px;
+}
+
+.movie-card2 img {
+    width: 200px;
+    border-radius: 10px;
+}
+
+.movie-card2 h1 {
+    font-size: 1.8rem;
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.movie-card2 p {
+    font-size: 1rem;
+    margin: 5px 0;
+    line-height: 1.5;
+    color: black;
+}
+
+.movie-card2 .details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.movie-card2 .rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.movie-card2 .rating p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.movie-card2 .stars-rating {
+    margin-top: 10px;
+}
